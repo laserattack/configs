@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 
-# custom aliases
+# МОИ КАСТОМНЫЕ НАСТРОЕЧКИ
 
 # Чтобы интерпретатор был доступен через lj
 alias lj="luajit"
@@ -131,6 +131,7 @@ alias lrit="luarocks install --tree ./deps"
 # вызов fastfetch
 alias ff="fastfetch"
 
+# быстрый коммит
 gacp() {
     if [ "$#" -eq 1 ]; then
         git add . && git commit -m "$1" && git push
@@ -139,4 +140,5 @@ gacp() {
     fi
 }
 
+# значок стрелочки вместо username@hostname
 PS1='\[\e[32m\]→ \[\e[34m\]\w \[\e[0m\]\$ '
