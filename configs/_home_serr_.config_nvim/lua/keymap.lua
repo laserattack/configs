@@ -14,6 +14,10 @@ vim.keymap.set('n', '<A-z>',
 vim.keymap.set('n', '<A-`>', ':tabnew | terminal<CR>i', { noremap = true, silent = true })
 -- Выход из режима терминала используя esc
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+-- Уменьшение ширины окна
+vim.keymap.set('n', '<A-1>', ':vertical resize -5<CR>', { noremap = true, silent = true })
+-- Увеличение ширины окна
+vim.keymap.set('n', '<A-2>', ':vertical resize +5<CR>', { noremap = true, silent = true })
 -- alt+3 - Перейти на пред. вкладку
 vim.keymap.set('n', '<A-3>', ':tabprevious<CR>', { noremap = true, silent = true })
 -- alt+4 - Перейти на след. вкладку

@@ -29,10 +29,6 @@ return {
         })
         -- alt+e - открыть/закрыть меню директорий
         vim.keymap.set("n", "<A-e>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
-        -- alt+1 - уменьшить ширину меню директорий на 5 символов
-        vim.keymap.set("n", "<A-1>", ":NvimTreeResize -5<CR>", { noremap = true, silent = true })
-        -- alt+2 - увеличить ширину меню директорий на 5 символов
-        vim.keymap.set("n", "<A-2>", ":NvimTreeResize +5<CR>", { noremap = true, silent = true })
         -- alt+] - сделать выбранную директорию корневой
         vim.keymap.set("n", "<A-]>", nvt_api.tree.change_root_to_node, { noremap = true, silent = true })
         -- alt+t - открывает файл в новой вкладке
