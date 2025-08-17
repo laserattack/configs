@@ -4,9 +4,11 @@ ITEMS_TO_COPY=(
     "$HOME/.config/nvim"
     "$HOME/.bashrc"
     "$HOME/.config/kitty/kitty.conf"
+    "$HOME/.config/fastfetch/config.jsonc"
 )
 
-DEST_DIR="$(pwd)"
+DEST_DIR="$(pwd)/configs"
+mkdir -p "$DEST_DIR"
 COPIED_COUNT=0
 
 for item in "${ITEMS_TO_COPY[@]}"; do
