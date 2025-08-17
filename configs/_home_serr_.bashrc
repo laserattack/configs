@@ -119,8 +119,6 @@ fi
 
 # custom aliases
 
-# ~ LUA ~
-
 # Чтобы интерпретатор был доступен через lj
 alias lj="luajit"
 # ljsp запускает целевой скрипт через скрипт /usr/local/bin/sp.lua, 
@@ -132,5 +130,13 @@ alias ljsp="luajit /usr/local/bin/sp.lua"
 alias lrit="luarocks install --tree ./deps"
 # вызов fastfetch
 alias ff="fastfetch"
+
+gacp() {
+    if [ "$#" -eq 1 ]; then
+        git add . && git commit -m "$1" && git push
+    else
+        git add . && git commit -m "quick update" && git push
+    fi
+}
 
 PS1='\[\e[32m\]→ \[\e[34m\]\w \[\e[0m\]\$ '
