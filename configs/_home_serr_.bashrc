@@ -143,5 +143,10 @@ gacp() {
 # минимальный клон
 alias gcl='git clone --depth 1 --no-tags --single-branch'
 
+# показать все директории .git в текущей директории + ее поддиректориях
+alias show_git_dirs='find . -type d -name ".git"'
+# удалить все директории .git в текущей директории + ее поддиректориях
+alias rm_git_dirs='find . -type d -name ".git" -exec rm -rf {} +'
+
 # значок стрелочки вместо username@hostname
 PS1='\[\e[32m\]→ \[\e[34m\]\w \[\e[0m\]\$ '

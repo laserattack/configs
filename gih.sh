@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
 ITEMS_TO_COPY=(
-    "$HOME/.config/nvim"
     "$HOME/.bashrc"
     "$HOME/.config/kitty/kitty.conf"
     "$HOME/.config/fastfetch/config.jsonc"
@@ -9,7 +8,6 @@ ITEMS_TO_COPY=(
 
 DEST_DIR="$(pwd)/configs"
 mkdir -p "$DEST_DIR"
-COPIED_COUNT=0
 
 for item in "${ITEMS_TO_COPY[@]}"; do
     if [ -e "$item" ]; then
@@ -22,7 +20,6 @@ for item in "${ITEMS_TO_COPY[@]}"; do
         
         echo "Copying: $item → $dest_path"
         cp -r "$item" "$dest_path"
-        ((COPIED_COUNT++))
     else
         echo "Error: '$item' does not exist, skipping"
     fi
