@@ -1,8 +1,10 @@
 -- Настройки дерева директорий
 
 return {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dir = "~/.config/nvim/deps/plugins/nvim-tree.lua",
+    dependencies = {
+        { dir = "~/.config/nvim/deps/plugins/nvim-web-devicons" }
+    },
     config = function()
         require("nvim-tree").setup({
             filters = {

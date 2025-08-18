@@ -3,7 +3,7 @@
 local ls_settings = {
     -- lsp сервер для Lua
     lua_ls = {
-        cmd = { vim.fn.expand('~/.config/nvim/lsp/lua/bin/lua-language-server') },
+        cmd = { vim.fn.expand('~/.config/nvim/deps/lsp/lua/bin/lua-language-server') },
         settings = {
             Lua = {
                 runtime = { version = 'LuaJIT' },
@@ -17,11 +17,11 @@ local ls_settings = {
     },
     -- lsp для Zig
     zls = {
-        cmd = { vim.fn.expand('~/.config/nvim/lsp/zls/zls') },
+        cmd = { vim.fn.expand('~/.config/nvim/deps/lsp/zls/zls') },
     },
     -- lsp для C/C++ (clangd)
     clangd = {
-        cmd = { vim.fn.expand('~/.config/nvim/lsp/clangd/bin/clangd') },
+        cmd = { vim.fn.expand('~/.config/nvim/deps/lsp/clangd/bin/clangd') },
         filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
         single_file_support = true,
         capabilities = {
@@ -60,9 +60,9 @@ local function check_lsp_path(server_name, binary_path)
 end
 
 return {
-    'neovim/nvim-lspconfig',
+    dir = '~/.config/nvim/deps/plugins/nvim-lspconfig',
     dependencies = {
-        'nvim-lua/lsp-status.nvim'
+        { dir = '~/.config/nvim/deps/plugins/lsp-status.nvim' }
     },
     config = function()
         for server_name, server_settings in pairs(ls_settings) do

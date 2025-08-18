@@ -1,7 +1,7 @@
 -- Настройка treesitter`a
 
 return {
-    "nvim-treesitter/nvim-treesitter",
+    dir = "~/.config/nvim/deps/plugins/nvim-treesitter",
     config = function()
         require("nvim-treesitter.configs").setup({
             ensure_installed = { "c", "cpp", "lua", "zig", "python" },

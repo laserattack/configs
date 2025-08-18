@@ -1,8 +1,10 @@
 -- Настройки статус-бара
 
 return  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    dir = '~/.config/nvim/deps/plugins/lualine.nvim',
+    dependencies = {
+        { dir = '~/.config/nvim/deps/plugins/nvim-web-devicons' }
+    },
     config = function()
         require('lualine').setup {
             options = {
@@ -44,9 +46,9 @@ return  {
                     'mode',
                     {
                         "lsp_status",
-                        icon = ' Language server:',
+                        icon = ' LS:',
                         symbols = {
-                            spinner = { 'loading...' },
+                            spinner = { '...' },
                             done = '✓',
                             separator = ' ',
                         },

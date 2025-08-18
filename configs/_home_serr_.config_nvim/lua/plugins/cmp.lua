@@ -1,12 +1,12 @@
 -- Варианты автодополнения вводимого текста 
 
 return {
-    'hrsh7th/nvim-cmp',
+    dir = '~/.config/nvim/deps/plugins/nvim-cmp',
     dependencies = {
-        'hrsh7th/cmp-buffer',
-        'hrsh7th/cmp-path',
-        'hrsh7th/cmp-cmdline',
-        'hrsh7th/cmp-nvim-lsp',
+        { dir = '~/.config/nvim/deps/plugins/cmp-buffer' },
+        { dir = '~/.config/nvim/deps/plugins/cmp-path' },
+        { dir = '~/.config/nvim/deps/plugins/cmp-cmdline' },
+        { dir = '~/.config/nvim/deps/plugins/cmp-nvim-lsp' },
     },
     config = function()
         local cmp = require('cmp')

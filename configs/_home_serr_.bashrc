@@ -140,5 +140,8 @@ gacp() {
     fi
 }
 
+# минимальный клон
+alias gcl='git clone --depth 1 --no-tags --single-branch'
+
 # значок стрелочки вместо username@hostname
 PS1='\[\e[32m\]→ \[\e[34m\]\w \[\e[0m\]\$ '
