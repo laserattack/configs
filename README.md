@@ -1,3 +1,5 @@
-Сюда бэкаплю всякие конфиги
+Сюда бэкаплю всякие однофайловые конфиги
 
-Конфиг neovim [тут](https://github.com/laserattack/nvim)
+Большие конфиги в своих репозиториях
+
+- [neovim](https://github.com/laserattack/nvim)
