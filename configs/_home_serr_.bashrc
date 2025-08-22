@@ -147,6 +147,9 @@ alias gcl='git clone --depth 1 --no-tags --single-branch'
 alias show_git_dirs='find . -type d -name ".git"'
 # удалить все директории .git в текущей директории + ее поддиректориях
 alias rm_git_dirs='find . -type d -name ".git" -exec rm -rf {} +'
+# если не сделать такой clear то могут быть артефакты при прокрутке терминала вверх
+alias clear='tput reset'
 
 # значок стрелочки вместо username@hostname
 PS1='\[\e[32m\]→ \[\e[34m\]\w \[\e[0m\]\$ '
+
