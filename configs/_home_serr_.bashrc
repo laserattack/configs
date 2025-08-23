@@ -151,5 +151,5 @@ alias rm_git_dirs='find . -type d -name ".git" -exec rm -rf {} +'
 alias clear='tput reset'
 
 # значок стрелочки вместо username@hostname
-PS1='\[\e[32m\]→ \[\e[34m\]\w \[\e[0m\]\$ '
-
+# PS1='\[\e[34m\]\w\n\[\e[32m\]→ \[\e[0m\]\$ '
+PS1='\[\e[34m\]\w\n\[\e[32m\]→ \[\e[0m\]'
