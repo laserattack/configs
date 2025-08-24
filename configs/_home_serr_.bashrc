@@ -152,4 +152,4 @@ alias clear='tput reset'
 
 # значок стрелочки вместо username@hostname
 # PS1='\[\e[34m\]\w\n\[\e[32m\]→ \[\e[0m\]\$ '
-PS1='\[\e[34m\]\w\n\[\e[32m\]→ \[\e[0m\]'
+PS1='\[\e[34m\]\w\n\[\e[38;5;117m\]→ \[\e[0m\]'
