@@ -156,3 +156,32 @@ PS1='\[\e[34m\]\w\n\[\e[32m\]→ \[\e[0m\]'
 
 
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+
+nd() {
+    if [ ! $# -eq 0 ]; then
+        [[ -d "$1" ]] || [[ -f "$1" ]] || touch "$1"
+
+        local target_path=$(realpath "$1")
+
+        docker run -it --rm --name nvimd \
+            -v /tmp/.X11-unix:/tmp/.X11-unix \
+            -v ~/.config/nvim:/root/.config/nvim \
+            -v $HOME:/VIRTUAL$HOME \
+            -e DISPLAY=$DISPLAY \
+            -w "/VIRTUAL$(dirname "$target_path")" \
+            nvimd \
+            nvim "/VIRTUAL$target_path"
+    else
+        local current_dir=$(pwd)
+        
+        docker run -it --rm --name nvimd \
+            -v /tmp/.X11-unix:/tmp/.X11-unix \
+            -v ~/.config/nvim:/root/.config/nvim \
+            -v $HOME:/VIRTUAL$HOME \
+            -e DISPLAY=$DISPLAY \
+            -w "/VIRTUAL$current_dir" \
+            nvimd \
+            nvim
+    fi
+}
