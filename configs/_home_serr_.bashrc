@@ -154,7 +154,7 @@ alias clear='tput reset'
 # PS1='\[\e[34m\]\w\n\[\e[32m\]→ \[\e[0m\]\$ '
 PS1='\[\e[34m\]\w\n\[\e[32m\]→ \[\e[0m\]'
 
-
+# Заставляет bash сохранять историю команд немедленно после выполнения каждой команды
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 nd() {
